@@ -1,0 +1,285 @@
+@media only screen and (min-width: 1000px) {
+  #train-types {
+    height: 20vh;
+  }
+  .train-type {
+    width: 40vw;
+    height: 20vh;
+    font-size: 30px;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  #right-part {
+    width: 90vw;
+    height: 100vh;
+    float: right;
+    flex-direction: column;
+    display: flex;
+  }
+  #path-diagram {
+    width: 10vw;
+    height: 100vh;
+    backdrop-filter: blur(7px);
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bolder;
+  }
+  #train-types {
+    width: 90vw;
+    backdrop-filter: blur(7px);
+
+    height: 15vh;
+    background-color: transparent;
+    display: flex !important;
+    position: absolute;
+    flex-direction: row;
+    overflow: scroll;
+  }
+  .train-type {
+    flex-shrink: 0;
+    width: 25vw;
+    height: 15vh;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .train-type:hover {
+    border: 2px solid black;
+    color: black;
+    background-color: whitesmoke;
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  .train-type.active {
+    border: 2px solid #222;
+    color: black;
+    background-color: whitesmoke;
+    transform: scale(1.05);
+  }
+  .train-type:active {
+    transform: scale(1.01);
+    background-color: rgb(234, 234, 234);
+    transition: 0.1s;
+  }
+  #content {
+    width: 90vw;
+    height: 80vh;
+  }
+  #detailed {
+    width: 30vw;
+    height: 85vh;
+    margin-top: 15vh;
+    float: right;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Glass effect */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+
+    /* keep your curved shape */
+    mask: url(#curveMask);
+    -webkit-mask: url(#curveMask);
+  }
+  .glass-noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85vw;
+    height: 100vh;
+    pointer-events: none;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2N89+7dfwAJlwP3W6I0GQAAAABJRU5ErkJggg==");
+    opacity: 0.15;
+  }
+
+  /* SVG mask (add somewhere in HTML) */
+  svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  #curveMask path {
+    fill: white;
+  }
+
+  /* Don't force every <img> to be fullscreen. Only the page background image
+     (`#page-bg`) should cover the viewport and sit behind content. */
+
+  /* SVG overlay that shows a blurred copy of the page background inside a curved clip */
+  .detailed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* don't block clicks */
+    background: transparent;
+    display: block;
+  }
+  /* page background fade transition */
+  #page-bg {
+    /* keep the existing transition and ensure the image sits behind content */
+    transition: opacity 0.35s ease;
+    opacity: 1;
+    will-change: opacity;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* keep it behind all page content */
+  }
+  /* detailed panel fade */
+  #detailed {
+    transition: opacity 0.25s ease;
+  }
+  .name {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 100px;
+  }
+  .detail {
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 999px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  #path-diagram {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    height: 20vh;
+  }
+  #train-types {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -10vh;
+
+    overflow: scroll;
+  }
+  .train-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: bold;
+    margin: 0;
+    backdrop-filter: blur(7px);
+    position: relative;
+    background-color: transparent;
+    flex-shrink: 0;
+    width: 40vw;
+    height: 10vh;
+    font-size: 40px;
+  }
+  img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Improvements for mobile layout: make #detailed full-width below header and train-types */
+@media only screen and (max-width: 999px) {
+  /* place train-types below the top banner */
+  #path-diagram {
+    height:10vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    
+    align-items: center;
+    
+  }
+  #train-types {
+    margin-top: 0;
+    padding-left: 4vw;
+    box-sizing: border-box;
+  }
+
+  /* detailed area occupies remaining viewport height */
+  #detailed {
+    width: 100vw;
+    height: 100%; /* subtract path-diagram (20vh) and train-types (10vh) */
+    margin-top: 0;
+    float: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw 4vw;
+    box-sizing: border-box;
+    color:white;
+    margin-top: 10vh;
+    background: rgba(0,0,0,0.35); /* slightly darker overlay for mobile readability */
+  }
+
+  /* adjust text sizes for mobile */
+  .name { font-size: 40px; margin-bottom: 24px; }
+  .detail { font-size: 25px; }
+
+  /* ensure background image covers and is positioned correctly */
+  #page-bg {
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* keep behind content on mobile */
+  }
+
+  /* detailed overlay svg should also cover the detailed box */
+  .detailed-overlay {
+    width: 100%;
+    height: 100%;
+  }
+}

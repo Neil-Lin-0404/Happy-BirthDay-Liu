@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train Showcase</title>
+    <link rel="stylesheet" href="./BT.css" />
+  </head>
+  <body>
+  <img id="page-bg" src="./images-horziontal/puyoma-zichiang3000.jpg" />
+    <div id="path-diagram">
+      <!-- show the title horizontally instead of stacked characters -->
+      <p>火車 10 輛 展覽</p>
+    </div>
+    <div id="right-part">
+      <div id="content">
+        <div id="train-types">
+          <!--
+        普悠馬 -
+        太魯閣 -
+        莒光 |
+        自強 3000 -
+        柴聯自強 |
+        pp自強
+        emu900
+        emu800
+        emu700
+        emu100  
+        -->
+          <div class="train-type" id="train-1" onclick="show1()">普悠瑪</div>
+          <div class="train-type" id="train-2" onclick="show2()">太魯閣</div>
+          <div class="train-type" id="train-3" onclick="show3()">莒光</div>
+          <div class="train-type" id="train-4" onclick="show4()">自強 3000</div>
+          <div class="train-type" id="train-5" onclick="show5()">柴聯自強</div>
+          <div class="train-type" id="train-6" onclick="show6()">pp自強</div>
+          <div class="train-type" id="train-7" onclick="show7()">emu900</div>
+          <div class="train-type" id="train-8" onclick="show8()">emu800</div>
+          <div class="train-type" id="train-9" onclick="show9()">emu700</div>
+          <div class="train-type" id="train-10" onclick="show10()">emu100</div>
+        </div>
+        <div id="detailed" class="curved-mask">
+          <div id="first">
+            <h1 class="name">普悠瑪號</h1>
+
+            <p class="detail">類型：城際列車</p>
+            <p class="detail">列車等級：自強號</p>
+            <p class="detail">開行日期：2013/2/6</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：857.9 公里</p>
+            <p class="detail">軌距：1067毫米</p>
+          </div>
+          <div id="second">
+            <h1 class="name">太魯閣號</h1>
+            <p class="detail">類型：城際列車</p>
+            <p class="detail">列車等級：自強號</p>
+            <p class="detail">開行日期：2007/5/8</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：249.7公里</p>
+            <p class="detail">軌距：1067毫米</p>
+          </div>
+          <div id="third">
+            <h1 class="name">莒光號</h1>
+            <p class="detail">類型：城際列車</p>
+            <p class="detail">列車等級：特甲客車/甲種客車</p>
+            <p class="detail">開行日期：1970/2/3</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：716.4公里</p>
+            <p class="detail">軌距：1067毫米</p>
+          </div>
+          <div id="fourth">
+            <h1 class="name">自強3000</h1>
+            <p class="detail">類型：城際列車</p>
+            <p class="detail">列車等級：自強號</p>
+            <p class="detail">開行日期：2021/12/29</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：21.35m/20.3m</p>
+            <p class="detail">車體闊度：2.9m</p>
+            <p class="detail">車體高度：3.75m/3.49m</p>
+            <p class="detail">營運速度：130公里/h</p>
+            <p class="detail">設計最高速度：150公里/h</p>
+          </div>
+          <div id="fifth">
+            <h1 class="name">柴聯自強</h1>
+            <p class="detail">類型：城際列車</p>
+            <p class="detail">列車等級：自強號</p>
+            <p class="detail">開行日期：1998/8/1</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度： 20.2m</p>
+            <p class="detail">車體闊度：2.8m</p>
+            <p class="detail">車體高度：4.0m</p>
+            <p class="detail">營運速度：110公里/h</p>
+            <p class="detail">設計最高速度：110公里/h</p>
+          </div>
+          <div id="sixth">
+            <h1 class="name">pp自強</h1>
+            <p class="detail">類型：推拉式列車</p>
+            <p class="detail">列車等級：自強號</p>
+            <p class="detail">開行日期：1996/11/1</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：20.3m</p>
+            <p class="detail">車體闊度：2.88m</p>
+            <p class="detail">車體高度：4.0m</p>
+            <p class="detail">營運速度：130公里/h</p>
+            <p class="detail">設計最高速度：160公里/h</p>
+          </div>
+          <div id="seventh">
+            <h1 class="name">Emu900</h1>
+            <p class="detail">類型：通勤型電列車</p>
+            <p class="detail">列車等級：區間車</p>
+            <p class="detail">開行日期：2021/4/4</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：21.5m/20.3m</p>
+            <p class="detail">車體闊度：2.89m</p>
+            <p class="detail">車體高度：3.9m/4.2m</p>
+            <p class="detail">營運速度：130公里/h</p>
+            <p class="detail">設計最高速度：140公里/h</p>
+          </div>
+          <div id="eighth">
+            <h1 class="name">emu800</h1>
+            <p class="detail">類型：通勤型電聯車</p>
+            <p class="detail">列車等級：區間車</p>
+            <p class="detail">開行日期：2014/1/2</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：21.2m/20.3m</p>
+            <p class="detail">車體闊度：2.8m</p>
+            <p class="detail">車體高度：4.2m/3.9m</p>
+            <p class="detail">營運速度：130公里/h</p>
+            <p class="detail">設計最高速度：140公里/h</p>
+          </div>
+          <div id="ninth">
+            <h1 class="name">Emu700</h1>
+            <p class="detail">類型：通勤型電聯車</p>
+            <p class="detail">列車等級：區間車</p>
+            <p class="detail">開行日期：2007/8/28</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：20.7m/20.3m</p>
+            <p class="detail">車體闊度：2.8m</p>
+            <p class="detail">車體高度：4.2m/3.9m</p>
+            <p class="detail">營運速度：110公里/h</p>
+            <p class="detail">設計最高速度：120公里/h</p>
+          </div>
+          <div id="tenth">
+            <h1 class="name">Emu100</h1>
+            <p class="detail">類型：電聯車</p>
+            <p class="detail">列車等級：自強號(? 未知</p>
+            <p class="detail">開行日期：1978/8/15</p>
+            <p class="detail">營運商：臺鐵</p>
+            <p class="detail">最長運轉距離：未知</p>
+            <p class="detail">軌距：1067毫米</p>
+            <p class="detail">車輛長度：20.0m</p>
+            <p class="detail">車體闊度：2.8m</p>
+            <p class="detail">車體高度：4.1m/3.8m</p>
+            <p class="detail">營運速度：120公里/h</p>
+            <p class="detail">設計最高速度：120公里/h</p>
+          </div>
+        </div>
+        <svg width="0" height="0">
+          <mask id="curveMask" maskUnits="userSpaceOnUse">
+            <!-- full-size mask -->
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+
+            <!-- the curved cut-out border -->
+            <path
+              d="M 0 0 
+             Q 150 200 0 675
+             L 600 800
+             L 600 0 
+             Z"
+              fill="black"
+            />
+          </mask>
+        </svg>
+
+        <div class="glass-noise"></div>
+      </div>
+    </div>
+
+    <script src="./BT.js"></script>
+  </body>
+</html>
