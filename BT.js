@@ -135,5 +135,6 @@ window.addEventListener('resize', () => {
 // ensure initial background set after DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
 	applyBackgroundFor(0);
+	alert("生日快樂！！刀哥");
 });
 
